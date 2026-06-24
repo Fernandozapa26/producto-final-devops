@@ -1,0 +1,6 @@
+services:
+  web:
+    image: ecoverde:v1
+    container_name: ecoverde-compose
+    ports:
+      - "8082:80"
