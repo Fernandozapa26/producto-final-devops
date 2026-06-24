@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: ecoverde-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: ecoverde
+
+  template:
+    metadata:
+      labels:
+        app: ecoverde
+
+    spec:
+      containers:
+      - name: ecoverde
+        image: ecoverde:v1
+        ports:
+        - containerPort: 80
